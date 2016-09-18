@@ -12,8 +12,8 @@
       h1, h2, h3 {
         font-family: 'Yanone Kaffeesatz';
         font-weight: normal;
-        margin-top: 30px !important;
-        margin-bottom: 30px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
       }
       h1 {
         font-size: 90px !important;
@@ -23,6 +23,14 @@
       }
       h3 {
         font-size: 50px !important;
+      }
+      ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
       li {
         margin-bottom: 20px;
@@ -56,7 +64,7 @@ class: center, middle
 
 1. **Intro**&nbsp; RIOT, the "Mini React"
 2. **Ease of Use**&nbsp; Functions
-3. **Compatibility**<br>LESS/SASS, Typescript, Webpack
+3. **Compatibility**&nbsp; jQuery, LESS/SASS, Typescript, Webpack
 4. **Example App**&nbsp; "Visual Recipe"
 5. **Learnings**
 
@@ -65,6 +73,9 @@ class: center, middle
 # 1.&nbsp; Introduction
 
 ## RiotJS, the "Mini React"
+
+![RiotJS](http://riotjs.com/img/logo/riot120x.png "RiotJS")
+![React](https://facebook.github.io/react/img/logo.svg "React")
 
 ---
 
@@ -135,6 +146,108 @@ See? It fits on one slide!
 * Yogurt
 * Raspberries
 * Bilberries
+
+---
+
+```html
+<ul if={ ingredients }>
+  <li each={ ingredients }>{ name }</li>
+</ul>
+```
+
+---
+
+# 3.&nbsp; Compatibility
+
+* **+++ jQuery** (best friends)
+* **+++ LESS** and SASS (SASS untested)
+* **+++ Bootstrap**
+* **++ Webpack** &larr; "riotjs-loader"
+* **+ Typescript** (ootb only<br>"typescript-simple")
+* **Testing?** (build a library and test it)
+
+---
+
+![Show me the Evidence](https://cdn.meme.am/instances/400x/64212366.jpg "Show me the Evidence")
+
+---
+
+# 4.&nbsp; Example App
+
+* https://github.com/cntech/visualrecipe
+* Runs **instantly*** on every computer with Node.js installed.
+
+*) instantly =
+```bash
+$ npm install
+$ npm install -g typings
+$ typings install
+$ npm run serve
+```
+
+---
+
+# 4.&nbsp; Learnings (myself)
+
+* mixing HTML+JS+CSS is **good**
+* Get to know **Webpack**
+* Get to know **TypeScript** (+ its API)
+* **Write Webpack Loaders** (it's easy)
+* **Separation of Concerns** (unlike Angular 1)
+* Put as much code as possible<br>into **&rarr; libraries** (testability)
+
+---
+
+# 4.&nbsp; Learnings
+
+If you decide to write a framework...
+
+* **Do not force** sth on the developer
+* Design it **straightforward**
+* Provide **short syntax &amp; semantics**
+* **Separate Concerns**
+* Never do what jQuery already does<br>(unless you know a good reason)
+
+---
+
+![RiotJS](http://riotjs.com/img/logo/riot240x.png "RiotJS")
+
+# is far from perfect
+
+## but its API+Documentation are exemplary*
+
+*) vorbildlich
+
+---
+
+![RiotJS](http://riotjs.com/img/logo/riot240x.png "RiotJS")
+
+# teaches us how to do things right
+
+### as a developer
+### and as a framework designer
+
+---
+
+# Try RIOT
+
+## Enjoy its docs
+
+### improve it
+
+### and finally use it in production
+
+### or use other frameworks like RIOT
+
+---
+
+## Thank You for Listening
+
+### You are a great audience
+
+### Now I would like to answer your Questions.
+
+![RiotJS](http://riotjs.com/img/logo/riot240x.png "RiotJS")
 
 
     </textarea>
