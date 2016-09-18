@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Sans'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+      }
+      h1 {
+        font-size: 90px !important;
+      }
+      h2 {
+        font-size: 70px !important;
+      }
+      h3 {
+        font-size: 50px !important;
+      }
+      li {
+        margin-bottom: 20px;
+      }
+      .remark-slide-content {
+        font-size: 36px !important;
+      }
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        font-size: 24px !important;
+      }
+      .remark-inline-code {
+        font-size: 36px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+![RiotJS](http://riotjs.com/img/logo/riot240x.png "RiotJS")
+
+# http://riotjs.com
+
+### What I learnt from it
+
+---
+
+# Agenda
+
+1. **Intro**&nbsp; RIOT, the "Mini React"
+2. **Ease of Use**&nbsp; Functions
+3. **Compatibility**<br>LESS/SASS, Typescript, Webpack
+4. **Example App**&nbsp; "Visual Recipe"
+5. **Learnings**
+
+---
+
+# 1.&nbsp; Introduction
+
+## RiotJS, the "Mini React"
+
+---
+
+## 1.&nbsp; Introduction
+
+RIOT is...
+
+* **component-based**<br>(like Facebook's React)
+* **small** (10 Kilobytes)
+* extremely **intuitive** &amp; **concise**
+
+https://facebook.github.io/react
+
+---
+
+![Show me the Code](https://cdn.meme.am/instances/400x/52770151.jpg "Show me the Code")
+
+---
+
+## 1.&nbsp; Introduction
+
+```html
+<my-component>
+  <p>Hello World</p>
+  <script>
+    console.log('Hello World')
+  </script>
+  <style scoped>
+    :scope {
+      display: block;
+    }
+  </style>
+</my-component>
+```
+
+See? It fits on one slide!
+
+---
+
+# 2.&nbsp; Ease of Use
+
+## Functions/Objects
+
+* `this` &larr; access the Tag object
+* `this.update()` &larr;<br>call this after async changes
+* `this.opts` &larr; tag attributes
+* `this.tags` &larr; all children
+
+---
+
+```html
+<recipe>
+  <ul if={ ingredients }>
+    <li each={ ingredients }>{ name }</li>
+  </ul>
+  <script>
+    let restApi = require('rest-api')
+    let me = this
+    restApi.getIngredients()
+      .then((ingredients) => { // async
+        me.ingredients = ingredients
+        me.udpate()
+      })
+  </script>
+</recipe>
+```
+
+* Yogurt
+* Raspberries
+* Bilberries
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
